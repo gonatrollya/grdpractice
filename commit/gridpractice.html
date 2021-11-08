@@ -8,19 +8,39 @@
     <link rel="stylesheet" href="practice.css">
 </head>
 <body>
-    <div class = "grid">
-        <button class= 'cell'>1</button>
-        <button class= 'cell'>2</button>
-        <button class= 'cell'>3</button>
-        <button class= 'cell'>4</button>
-        <button class= 'cell'>5</button>
-        <button class= 'cell'>6</button>
-        <button class= 'cell'>7</button>
-        <button class= 'cell'>8</button>
-        <button class= 'cell'>9</button>
-
-    </div>
-
+    <table class = "table">
+        <tr>
+            <td colspan="4"><div class='output' >example text on the screen</div></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button class= 'span-two' id='AC'>AC</button></td>
+            <td><button id='del'>del</button></td>
+            <td><button class= 'operator'>*</button></td>
+        </tr>
+        <tr>
+            <td><button class= 'cell'>1</button></td>
+            <td><button class= 'cell'>1</button></td>
+            <td><button class= 'cell'>1</button></td>
+            <td><button class= 'operator'>÷</button></td>
+        </tr>
+        <tr>
+            <td><button class= 'cell'>1</button></td>
+            <td><button class= 'cell'>1</button></td>
+            <td><button class= 'cell'>1</button></td>
+            <td><button class= 'operator'>+</button></td>
+        </tr>
+        <tr>
+            <td width="100"><button class= 'cell'>1</button></td>
+            <td width="100"><button class= 'cell'>1</button></td>
+            <td width="100"><button class= 'cell'>1</button></td>
+            <td width="100"><button class= 'operator'>-</button></td>
+        </tr>
+        <tr>
+            <td><button class= 'cell'>.</button></td>
+            <td><button class= 'cell'>0</button></td>
+            <td colspan="2"><button class= 'span-two' id='equals'>=</button></td>
+        </tr>
+    </table>
 
 </body>
 </html>
