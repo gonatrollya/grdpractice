@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-7">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Creating first input box --> 
+    <input type="number" style="size-adjust: 5;" id='input_1'onkeyup="operator();" size=large>
+
+    <!-- Use of span to make sure its inline with boxes--> 
+    <span> choose an operator </span>
+
+    <!-- Creating drop down to slect operator-->
+    <select id='selector'> 
+    <option value="+">add</option>
+    <option value="-">subtract</option>
+    <option value="/">devide</option>
+    <option value="*">multiply</option>
+    </select>
+    <!-- Second input and equals button -->
+    <input type="number"  id='input_2' onkeyup="operator();">
+    <button id='equals' onclick="operator();" > equals </button>
+
+    <!-- Paragraph where answer will be updated to-->
+    <p id='answer'>the answer shall be put here</p>
+
+    <!-- First bank of buttons for first input-->
+    <button id='1' class='number' onclick="func1();">1</button>
+    <button id='2' class='number' onclick="func2();">2</button>
+    <button id='3' class='number' onclick="func3();">3</button>
+    <button id='4' class='number' onclick="func4();">4</button>
+    <button id='5' class='number' onclick="func5();">5</button>
+    <button id='6' class='number' onclick="func6();">6</button>
+    <button id='7' class='number' onclick="func7();">7</button>
+    <button id='8' class='number' onclick="func8();">8</button>
+    <button id='9' class='number' onclick="func9();">9</button>
+    <button id='0' class='number' onclick="func0();">0</button>
+    <button id='backspace' onclick="funcDel();">DEl</button>
+    <button id='all-clear' onclick="funcAC();">AC</button>
+    <span> First input </span>
+    <!-- Span to keep the label inline-->
+
+    <p> </p> <!-- Empty pargraoh to create spacing-->
+
+    <!-- Second bank of buttons for second input-->
+    <button id='1' class='number' onclick="func1r();">1</button>
+    <button id='2' class='number' onclick="func2r();">2</button>
+    <button id='3' class='number' onclick="func3r();">3</button>
+    <button id='4' class='number' onclick="func4r();">4</button>
+    <button id='5' class='number' onclick="func5r();">5</button>
+    <button id='6' class='number' onclick="func6r();">6</button>
+    <button id='7' class='number' onclick="func7r();">7</button>
+    <button id='8' class='number' onclick="func8r();">8</button>
+    <button id='9' class='number' onclick="func9r();">9</button>
+    <button id='0' class='number' onclick="func0r();">0</button>
+    <button id='backspace' onclick="funcDelr();">DEl</button>
+    <button id='all-clear' onclick="funcACr()">AC</button>
+    <span> Second input</span>
+    <!-- Span to keep thw label inline-->
+
+
+    <!-- Start of java script-->
+    <SCRIPT>
+
+        // Function checks which operator has been selected and then calls calculate with the correct operator
+        function operator() {
+            operatorSelect =  document.getElementById('selector')
+            switch (operatorSelect.value) {
+                case '+' :
+                console.log('addition')
+                var operation = '+'
+                calculate(operation)
+                break
+                case '-' :
+                console.log('subtraction')
+                var operation = '-'
+                calculate(operation)
+                break
+                case '*' :
+                console.log('multiplication')
+                var operation = '*'
+                calculate(operation)
+                break
+                case '/' :
+                console.log('devision')
+                var operation = '/'
+                calculate(operation)
+                break
+            }
+        }
+
+        // Takes in which operation has been selected from function-operator, calculates the answer and displays it
+        function calculate(operation) {
+            var firstNum = document.getElementById('input_1').value
+            var secondNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            console.log(secondNum)
+            switch (operation) {
+                case '+' :
+                var answer = Number(firstNum) + Number(secondNum)
+                break
+                case '-' :
+                var answer = firstNum - secondNum
+                break
+                case '*' :
+                var answer = firstNum * secondNum
+                break
+                case '/' :
+                var answer = firstNum / secondNum
+
+            }
+
+            
+            document.getElementById('answer').innerHTML = answer
+        }
+        // clears all values in the first inout box
+        function funcAC() {
+            document.getElementById('input_1').value = ''
+            
+        }
+
+        // Deleted one number from the first input box
+        function funcDel() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            console.log('function is being called correctly')
+            firstNum = firstNum.slice(0, -1)
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+
+
+        }
+        // Func1 thru func0 all append there respective numbers to end of the first input box
+        function func1() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            firstNum += '1'
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+         }
+        function func2() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            firstNum += '2'
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+        }
+        function func3() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            firstNum += '3'
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+        }
+        function func4() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            firstNum += '4'
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+        }
+        function func5() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            firstNum += '5'
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+        }
+        function func6() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            firstNum += '6'
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+        }
+        function func7() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            firstNum += '7'
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+        }
+        function func8() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            firstNum += '8'
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+        }
+        function func9() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            firstNum += '9'
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+        }
+        function func0() {
+            var firstNum = document.getElementById('input_1').value
+            console.log(firstNum)
+            firstNum += '0'
+            console.log(firstNum)
+            document.getElementById('input_1').value = firstNum
+        }
+
+
+
+        // Deletes all numbers in the second (right) input box as denoted by the r in the name
+        function funcACr() {
+            document.getElementById('input_2').value = ''
+            
+        }
+
+        // Deletes one number from the end of the second (right) input box as denoted by the r in the name
+        function funcDelr() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            console.log('function is being called correctly')
+            firstNum = firstNum.slice(0, -1)
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        
+        }
+
+        // Func1r thru func0r all append there respective numbers to the end of the second (right) input 
+        // box as denoted by the r in the name
+        function func1r() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            firstNum += '1'
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        }
+        function func2r() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            firstNum += '2'
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        }
+        function func3r() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            firstNum += '3'
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        }
+        function func4r() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            firstNum += '4'
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        }
+        function func5r() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            firstNum += '5'
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        }
+        function func6r() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            firstNum += '6'
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        }
+        function func7r() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            firstNum += '7'
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        }
+        function func8r() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            firstNum += '8'
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        }
+        function func9r() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            firstNum += '9'
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        }
+        function func0r() {
+            var firstNum = document.getElementById('input_2').value
+            console.log(firstNum)
+            firstNum += '0'
+            console.log(firstNum)
+            document.getElementById('input_2').value = firstNum
+        }
+
+    </SCRIPT>
+
+
+</body>
+</html>
