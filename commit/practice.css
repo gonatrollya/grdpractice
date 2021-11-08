@@ -8,9 +8,13 @@ table, td, th {
   
 
 table {
-    width: 70%;
+    max-width: 700%;
     height: 70%;
     border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    margin-bottom: auto;
 
 }
 
@@ -18,7 +22,11 @@ td button {
     width: 100%;
     height: 100%;
 }
-
+button:hover {
+    background-color:rgba(0, 0, 0, .55) ;
+    color: rgba(255, 255, 255, .75);
+    cursor:pointer;
+}
 button {
     font-size: 50px;
     border-radius: 2%;
