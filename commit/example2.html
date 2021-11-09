@@ -28,29 +28,31 @@
     <p id='answer'>the answer shall be put here</p>
 
     <!-- First bank of buttons for first input-->
-    <table id = "inputL" class = 'inlineTable'>
+    <div class = 'inlineTable'>
+    <table class = "inputL" >
         <tr>
-            <td><button id='1' class='number' onclick="func1();">1</button></td>
-            <td><button id='2' class='number' onclick="func2();">2</button></td>
-            <td><button id='3' class='number' onclick="func3();">3</button></td>
+            <td><button id='1' class='number' onclick="func1();" onclick="operator();">1</button></td>
+            <td><button id='2' class='number' onclick="func2();" onclick = "operator();">2</button></td>
+            <td><button id='3' class='number' onclick="func3();" onclick = "operator();">3</button></td>
         </tr>
         <tr>
-            <td><button id='4' class='number' onclick="func4();">4</button></td>
-            <td><button id='5' class='number' onclick="func5();">5</button></td>
-            <td><button id='6' class='number' onclick="func6();">6</button></td>
+            <td><button id='4' class='number' onclick="func4();" onclick = "operator();">4</button></td>
+            <td><button id='5' class='number' onclick="func5();" onclick = "operator();">5</button></td>
+            <td><button id='6' class='number' onclick="func6();" onclick = "operator();">6</button></td>
         </tr>
         <tr>
-            <td><button id='7' class='number' onclick="func7();">7</button></td>
-            <td><button id='8' class='number' onclick="func8();">8</button></td>
-            <td><button id='9' class='number' onclick="func9();">9</button></td>
+            <td><button id='7' class='number' onclick="func7();" onclick = "operator();">7</button></td>
+            <td><button id='8' class='number' onclick="func8();" onclick = "operator();">8</button></td>
+            <td><button id='9' class='number' onclick="func9();" onclick = "operator();">9</button></td>
         </tr>
         <tr>
-            <td><button id='backspace' onclick="funcDel();">DEl</button></td>
-            <td><button id='0' class='number' onclick="func0();">0</button></td>
-            <td><button id='all-clear' onclick="funcAC();">AC</button></td>
+            <td><button id='backspace' onclick="funcDel();" onclick = "operator();">DEl</button></td>
+            <td><button id='0' class='number' onclick="func0();" onclick = "operator();">0</button></td>
+            <td><button id='all-clear' onclick="funcAC();" onclick = "operator();">AC</button></td>
         </tr>
 
     </table>
+    </div>
     <!--<button id='1' class='number' onclick="func1();">1</button>
     <button id='2' class='number' onclick="func2();">2</button>
     <button id='3' class='number' onclick="func3();">3</button>
@@ -67,27 +69,30 @@
     <!-- Span to keep the label inline-->
 
     <p> </p> <!-- Empty pargraoh to create spacing-->
-    <table id = "inputR" class = "inlineTable">
+    <div class = "inlineTable">
+    <table class = "inputR">
         <tr>
-            <td><button id='1' class='number' onclick="func1r();">1</button></td>
-            <td><button id='2' class='number' onclick="func2r();">2</button></td>
-            <td><button id='3' class='number' onclick="func3r();">3</button></td>
+            <td><button id='1' class='number' onclick="func1r();" onclick = "operator();">1</button></td>
+            <td><button id='2' class='number' onclick="func2r();" onclick = "operator();">2</button></td>
+            <td><button id='3' class='number' onclick="func3r();" onclick = "operator();">3</button></td>
         </tr>
         <tr>
-            <td><button id='4' class='number' onclick="func4r();">4</button></td>
-            <td><button id='5' class='number' onclick="func5r();">5</button></td>
-            <td><button id='6' class='number' onclick="func6r();">6</button></td>
+            <td><button id='4' class='number' onclick="func4r();" onclick = "operator();">4</button></td>
+            <td><button id='5' class='number' onclick="func5r();" onclick = "operator();">5</button></td>
+            <td><button id='6' class='number' onclick="func6r();" onclick = "operator();">6</button></td>
         </tr>
         <tr>
-            <td><button id='7' class='number' onclick="func7r();">7</button></td>
-            <td><button id='8' class='number' onclick="func8r();">8</button></td>
-            <td><button id='9' class='number' onclick="func9r();">9</button></td>
+            <td><button id='7' class='number' onclick="func7r();" onclick = "operator();">7</button></td>
+            <td><button id='8' class='number' onclick="func8r();" onclick = "operator();">8</button></td>
+            <td><button id='9' class='number' onclick="func9r();" onclick = "operator();">9</button></td>
         </tr>
         <tr>
-            <td><button id='backspace' onclick="funcDelr();">DEl</button></td>
-            <td><button id='0' class='number' onclick="func0r();">0</button></td>
-            <td><button id='all-clear' onclick="funcACr();">AC</button></td>
+            <td><button id='backspace' onclick="funcDelr();" onclick = "operator();">DEl</button></td>
+            <td><button id='0' class='number' onclick="func0r();" onclick = "operator();">0</button></td>
+            <td><button id='all-clear' onclick="funcACr();" onclick = "operator();">AC</button></td>
         </tr>
+    </table>
+    </div>
     <!-- Second bank of buttons for second input-->
     <!-- <button id='1' class='number' onclick="func1r();">1</button>
     <button id='2' class='number' onclick="func2r();">2</button>
@@ -110,23 +115,39 @@
     border: 1px solid black;
     }
 
-    table {
-    max-width: 700%;
-    height: 70%;
+
+    .inlineTable .inputL {
+    max-width: 500%;
+    height: 100%;
+    border-style: dashed;
     margin-left: auto;
     margin-right: auto;
     margin-top: 75px;
     margin-bottom: auto;
-    border-color: white;
+    }
+
+    table {
+    max-width: 700%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    margin-bottom: auto;
+    border-color: rgba(255, 255, 255, 0);
     border-radius: 0%;
 
+    }
+    button:hover {
+    background-color:rgba(0, 0, 0, .55) ;
+    color: rgba(255, 255, 255, .75);
+    cursor:pointer;
     }
     
 
     td button {
     width: 100%;
     height: 100%;
-}
+    }
 
     .inlineTable{
         float: left;
