@@ -28,7 +28,30 @@
     <p id='answer'>the answer shall be put here</p>
 
     <!-- First bank of buttons for first input-->
-    <button id='1' class='number' onclick="func1();">1</button>
+    <table id = "inputL" class = 'inlineTable'>
+        <tr>
+            <td><button id='1' class='number' onclick="func1();">1</button></td>
+            <td><button id='2' class='number' onclick="func2();">2</button></td>
+            <td><button id='3' class='number' onclick="func3();">3</button></td>
+        </tr>
+        <tr>
+            <td><button id='4' class='number' onclick="func4();">4</button></td>
+            <td><button id='5' class='number' onclick="func5();">5</button></td>
+            <td><button id='6' class='number' onclick="func6();">6</button></td>
+        </tr>
+        <tr>
+            <td><button id='7' class='number' onclick="func7();">7</button></td>
+            <td><button id='8' class='number' onclick="func8();">8</button></td>
+            <td><button id='9' class='number' onclick="func9();">9</button></td>
+        </tr>
+        <tr>
+            <td><button id='backspace' onclick="funcDel();">DEl</button></td>
+            <td><button id='0' class='number' onclick="func0();">0</button></td>
+            <td><button id='all-clear' onclick="funcAC();">AC</button></td>
+        </tr>
+
+    </table>
+    <!--<button id='1' class='number' onclick="func1();">1</button>
     <button id='2' class='number' onclick="func2();">2</button>
     <button id='3' class='number' onclick="func3();">3</button>
     <button id='4' class='number' onclick="func4();">4</button>
@@ -40,13 +63,33 @@
     <button id='0' class='number' onclick="func0();">0</button>
     <button id='backspace' onclick="funcDel();">DEl</button>
     <button id='all-clear' onclick="funcAC();">AC</button>
-    <span> First input </span>
+    <span> First input </span> -->
     <!-- Span to keep the label inline-->
 
     <p> </p> <!-- Empty pargraoh to create spacing-->
-
+    <table id = "inputR" class = "inlineTable">
+        <tr>
+            <td><button id='1' class='number' onclick="func1r();">1</button></td>
+            <td><button id='2' class='number' onclick="func2r();">2</button></td>
+            <td><button id='3' class='number' onclick="func3r();">3</button></td>
+        </tr>
+        <tr>
+            <td><button id='4' class='number' onclick="func4r();">4</button></td>
+            <td><button id='5' class='number' onclick="func5r();">5</button></td>
+            <td><button id='6' class='number' onclick="func6r();">6</button></td>
+        </tr>
+        <tr>
+            <td><button id='7' class='number' onclick="func7r();">7</button></td>
+            <td><button id='8' class='number' onclick="func8r();">8</button></td>
+            <td><button id='9' class='number' onclick="func9r();">9</button></td>
+        </tr>
+        <tr>
+            <td><button id='backspace' onclick="funcDelr();">DEl</button></td>
+            <td><button id='0' class='number' onclick="func0r();">0</button></td>
+            <td><button id='all-clear' onclick="funcACr();">AC</button></td>
+        </tr>
     <!-- Second bank of buttons for second input-->
-    <button id='1' class='number' onclick="func1r();">1</button>
+    <!-- <button id='1' class='number' onclick="func1r();">1</button>
     <button id='2' class='number' onclick="func2r();">2</button>
     <button id='3' class='number' onclick="func3r();">3</button>
     <button id='4' class='number' onclick="func4r();">4</button>
@@ -58,9 +101,43 @@
     <button id='0' class='number' onclick="func0r();">0</button>
     <button id='backspace' onclick="funcDelr();">DEl</button>
     <button id='all-clear' onclick="funcACr()">AC</button>
-    <span> Second input</span>
+    <span> Second input</span> -->
     <!-- Span to keep thw label inline-->
 
+
+    <style>
+    table, td, th {
+    border: 1px solid black;
+    }
+
+    table {
+    max-width: 700%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 75px;
+    margin-bottom: auto;
+    border-color: white;
+    border-radius: 0%;
+
+    }
+    
+
+    td button {
+    width: 100%;
+    height: 100%;
+}
+
+    .inlineTable{
+        float: left;
+        padding: 10%;
+
+    }
+
+
+
+
+    </style>
 
     <!-- Start of java script-->
     <SCRIPT>
